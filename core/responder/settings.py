@@ -122,10 +122,10 @@ class Settings(ConfigWatcher):
         self.WPAD_Script      = self.config['Responder']['HTTP Server']['WPADScript']
 
         if not os.path.exists(self.Html_Filename):
-            print "Warning: %s: file not found" % self.Html_Filename
+            print("Warning: %s: file not found" % self.Html_Filename)
 
         if not os.path.exists(self.Exe_Filename):
-            print "Warning: %s: file not found" % self.Exe_Filename
+            print("Warning: %s: file not found" % self.Exe_Filename)
 
         # SSL Options
         self.SSLKey  = self.config['Responder']['HTTPS Server']['SSLKey']
@@ -162,7 +162,7 @@ class Settings(ConfigWatcher):
         self.NumChal = self.config['Responder']['Challenge']
 
         if len(self.NumChal) is not 16:
-            print "The challenge must be exactly 16 chars long.\nExample: 1122334455667788"
+            print("The challenge must be exactly 16 chars long.\nExample: 1122334455667788")
             sys.exit(-1)
 
         self.Challenge = ""
